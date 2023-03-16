@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Médias</h1>
+    
+
+    <script>
+        const array = [70,70,80]
+        console.log(mediaDoAluno(array))
+        function mediaDoAluno(notas) {
+            let soma = 0;
+            for (let nota of notas) {
+                soma += nota;
+            }
+            const media = soma / (notas.length);
+
+            if (media < 60) return 'F';
+            if (media < 70) return 'D';
+            if (media < 80) return 'C';
+            if (media < 90) return 'B';
+            return 'A'
+
+        }
+        
+    </script>
+</body>
+</html>

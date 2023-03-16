@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natal 2023</title>
+    <style>
+        body {
+            font: normal 15px verdana
+        }
+    </style>
+</head>
+<body>
+    <h1>Natalézia 2023 </h1>
+    <p id="texto"></p>
+
+    <script>
+        let dataInicial = new Date();
+        let dataFinal = new Date(2023, 11, 24);
+        var diferençaTempo = dataFinal.getTime() - dataInicial.getTime();
+        var diferençaDias = Math.ceil(diferençaTempo / (24 * 60 * 60 * 1000))
+        document.getElementById('texto').innerHTML = `Inês quero-te dizer que faltam <strong>${diferençaDias}</strong> dias para o próximo <strong><u>Natal</u></strong>! Se amanhã voltares a abrir este ficheiro, faltará menos 1 dia.<br> Está um pouco pobre o conteúdo, mas prometo melhorar... <br> Beijinhos `
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Par ou Impar</title>
+    <style>
+        body {
+            text-align: center;
+            font: normal 13pt verdana
+        }
+    </style>
+</head>
+<body>
+    <h1>Par ou Impar</h1> <br>
+    Escolhe uma sequencia de números:  <br><br> <input type="number" name="numInic" id="numInic" placeholder="Escolher primeiro número">
+    <br><br> <input type="number" name="numFin" id="numFin" placeholder="Escolher último número">
+    <br><br> <input type="button" value="Executar" onclick="executar()">
+    <br><br> <div id="res">Aqui sairá o resultado</div>
+
+    <script>
+                //NÃO FUNCIONA NA IDEIA ORIGINAL
+            function executar(){
+            let primNum = document.getElementById('numInic')
+            let segNum = document.getElementById('numFin')
+            let res = document.getElementById('res')
+            let primNumN = Number.parseFloat(primNum.value)
+            let segNumN = Number.parseFloat(segNum.value)
+            for (let c = primNumN; c <= segNumN; c++)
+                if (c % 2 === 0) {
+                res.innerHTML = (c, 'Par')
+                } else {
+                    res.innerHTML = (c, 'Impar')
+                }
+        } 
+    </script>
+</body>
+</html>

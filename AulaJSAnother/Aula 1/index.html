@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprender JavaScrip</title>
+</head>
+    <style>
+       body {
+        background-position: center;
+        background: rgb(4, 4, 184);
+        font: normal 12pt verdana;
+        text-align: center;
+       }
+       div#div1 {
+        background: white;
+        height: 300px;
+        width: 400px;
+        margin: auto;
+        box-shadow: black 10px 15px 15px;
+       }
+       input#texto1 {
+        margin: auto;
+        font: normal 12pt verdana;
+        text-align: center;
+        text-shadow: 10px 10px 10px blue;
+              }
+    </style>
+<body>
+    <h1>Aprender JavaScript!</h1>
+    <p id="texto"></p>
+    <p>
+        <script>
+            document.write('Olá <U>escrito</u> com document.write.')
+        </script>
+    </p>
+    <button onclick="eventC1()">Clicar</button> <br>
+    <div id='div1' onmouseenter="vermelho()" onmouseleave="branco()">
+        
+
+    </div> <br>
+
+    <input onfocus="limpaTexto()" id="texto1" type="text" style="padding: 50px;" placeholder="Escreve algo" value="Texto supostamente preenchido">
+
+
+
+    <script src="index.js"></script>
+</body>
+</html>

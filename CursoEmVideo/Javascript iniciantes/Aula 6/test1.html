@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>soma</title>
+    <style>
+    
+        body {
+            font: normal 14pt Arial;
+            background-color: azure;
+        }
+        h1 {
+            color: rgb(37, 22, 22);
+            font: normal 16pt Verdana;
+        }
+    </style>
+</head>
+<body>
+    <h1>Constatação</h1>
+
+    <script>
+        /*
+       var numero1 = window.prompt("Um número") //está string
+       var numero2 = window.prompt("Outro número") //está string
+       var soma = numero1 + numero2
+       window.alert("A soma dá " + soma)
+       
+
+       var numero1 = Number.parseFloat(window.prompt("Um número")); //pode ser usado unicamente NUmber(window.prompt...)
+       var numero2 = Number.parseFloat(window.prompt("Outro número")); //pode ser usado unicamente NUmber(window.prompt...)
+       var soma = numero1 + numero2;
+       window.alert("A soma dá " + soma)
+       document.write("A soma dos números introduzidos é de " + soma)
+
+       PARA CONVERTER NÚMERO PARA STRING
+       String(n)
+       n.toString
+                document.write("A soma dos números introduzidos é de " + soma.toString)
+                document.write("A soma dos números introduzidos é de " + String(soma))  
+       */
+       
+       var numero1 = Number(window.prompt("Um número")); //pode ser usado unicamente NUmber(window.prompt...)
+       var numero2 = Number(window.prompt("Outro número")); //pode ser usado unicamente NUmber(window.prompt...)
+       var soma = numero1 + numero2;
+       window.alert("A soma dá " + soma)
+      
+       document.write(`A soma dos números introduzidos, ${numero1} e ${numero2}, é de ` + soma ) //usar Template String para colocar as variáveis
+       /* Para colocar um número com por exemplo 3 casas décimais
+       numeroi1.toFixed(3)
+          Para colocar um número com 2 casas decimais passando de ponto para virgula
+       numero1.toFixed(2).replace(".", ",")
+       */
+       
+      document.write(`, com 3 casas decimais fica ` + soma.toFixed(3))
+      document.write(", com 4 casas decimais separadas por vírgula " + soma.toFixed(4).replace("." , ","))
+      document.write(` convertido em euros daria ` + soma.toLocaleString("pt", {style: "currency", currency: "EUR"}) )
+    </script>
+</body>
+</html>

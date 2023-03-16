@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Soma dos Multiplos de 3 e 5</h1>
+    <p>Num limite de 0 a 10</p>
+    <input type="number" name="limiteNu" id="limiteNu">
+    <input type="button" value="exec" onclick="somar()"> <br> <br>
+    <div id="res">Resultado</div>
+
+    <script>
+       // let inserir = document.getElementById('limiteNu')
+       // let limiteN = Number(inserir.value)
+       
+        somar(10)
+        function somar(limiteN){
+            
+            let multiplos3 = 0;
+            let multiplos5 = 0;
+            for(i=0; i<=limiteN ; i++) {
+                if (i % 3 === 0) 
+                multiplos3 += i;
+                if (i % 5 === 0)
+                multiplos5 += i
+            }
+            let somados = multiplos3 + multiplos5
+            console.log(multiplos3 + multiplos5)
+            res.innerHTML = `A soma dos impares e pares de 0 a 10 é de ${somados}`
+           
+        }
+    </script>
+</body>
+</html>

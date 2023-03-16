@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiro passos com DOM</title>
+    <style>
+        body {
+            background-color: rgb(65, 235, 220);
+            font: normal 14pt Arial;
+
+        }
+        h1 {
+            font: strong 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciar estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprender a usar o <strong> DOM</strong></p>
+    <div id="msg"> Clique em mim</div>
+    <div id="sms"> Clica ali </div>
+    <div id="test"><strong>Clicasses</strong> </div>
+  <script>
+    var corpo = window.document.body
+    var p1 = window.document.getElementsByTagName("p")[1]
+    var titulo = window.document.getElementsByTagName("h1")[0]
+    
+    titulo.style.color = "blue"
+    titulo.style.background = "white"
+    
+    corpo.style.background = "ligth blue"
+    p1.style.color = "blue"
+    document.write(p1.innerHTML) //com innerHTML surge como formatado, com innerText surge sem formatação
+    //var d = window.document.getElementById("msg")
+    //d.style.background = "green"
+    //d.innerText = "Caraças"
+    //d.innerText = "porra"
+    var d = window.document.querySelector(`div#msg`) 
+    // se fosse uma classe em vez id ficaria "div.msg"
+    d.style.background = "red";
+    d.innerText = "Cesar";
+    d.style.color = "white";
+    var e = window.document.querySelector("div#sms")
+    e.style.background = "yellow"
+    var f = window.document.querySelector("div#test")
+    f.style.background = "green" 
+    
+  </script>  
+</body>
+</html>

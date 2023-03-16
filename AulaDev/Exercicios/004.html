@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velocidade</title>
+</head>
+<body>
+    <h1>Controlo de Velocidade</h1>
+    
+    Velocidade Máxima: <input type="number" name="velM" id="velM" placeholder="Limite Max Velocidade"> <br><br>
+    Velocidade Detectada: <input type="number" name="velD" id="velD" placeholder="Velocidade Detectada">
+    <input type="button" value="Verificar" onclick="conVel()">
+    <div id="res">
+    </div>
+
+    <script>        
+        
+        function conVel() {
+            let vel = document.getElementById('velD')
+            let limVel = document.getElementById('velM')
+            let res = document.getElementById('res')
+            let velMax = Number.parseFloat(limVel.value)
+            let velReal = Number.parseFloat(vel.value)
+            let difVel = velReal - velMax
+            let difVelPerc = 100 * difVel / velMax
+            res.innerHTML = `<p>A tua velocidade é de ${velReal} km/h. </p>`
+            if (velReal <= velMax){
+              res.innerHTML += '<p>Estás dentro da velocidade permitida, conduz em segurança!</p>'
+            } else {
+                res.innerHTML += `<p>Estás a conduzir em excesso de velocidade!</p> 
+                                    <p>A velocidade máxima permitida é de ${velMax} km/h, estás a exceder em ${difVel} km/h.`      
+                    } if (difVelPerc > 30 && difVelPerc <= 50){
+                        res.innerHTML += `<p>Sendo a tua velocidade superior a 30% do máximo permitido (${difVelPerc}%) e inferior a 50%, pagas a multa e levas aviso!</p>`
+                    } if (difVelPerc > 50 && difVelPerc <= 100 ){
+                        res.innerHTML += `<p>Sendo a tua velocidade superior a 50% do máximo permitido (${difVelPerc}%), pagas a multa e passas a andar a pé!</p>`
+                    } if (difVelPerc > 100) {
+                        res.innerHTML += `Estás a exceder a velocidade em pelo menos 2x... VAIS DIRETO PARA A FORCA!`    
+                    }
+        }
+    </script>
+    
+    
+</body>
+</html>

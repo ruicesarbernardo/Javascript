@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propriedades de Objecto</title>
+</head>
+<body>
+    <h1>Propriedades de Objecto</h1>
+    <div id="res">Resposta</div>
+
+
+    <script>
+        const filme = {
+            titulo: 'Vingadores',
+            ano: 2018,
+            director: 'Robin',
+            personagem: 'Thor'
+        }
+        
+        exibirPropriedades(filme)
+        function exibirPropriedades(obj) {
+            for (prop in obj)
+                if (typeof obj[prop] === 'string') {
+                    console.log(prop, obj[prop])
+                    res.innerHTML = (prop, obj[prop])
+                }
+        }
+
+    </script>
+</body>
+</html>

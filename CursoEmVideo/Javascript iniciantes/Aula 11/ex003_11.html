@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Multas</title>
+</head>
+<body>
+    <h1>Controlo de Velocidade</h1>
+    Velocidade do charuto: <input type="number" name="velCarro" id="velCarro"> Km/h
+    <input type="button" value="Verificar" onclick="Calcular()">
+    <div id = "res"></div>
+
+    <script>
+            function Calcular() {
+                var txtv = window.document.getElementById('velCarro')
+                var res = window.document.getElementById("res")
+                var vel = Number.parseFloat(txtv.value)
+                res.innerHTML= `<p> A tua velocidade é de <strong>${vel} km/h</strong>!</p>`
+                if (vel > 60) {
+                    res.innerHTML += `Estás <strong>QUEIMADO</strong> (e o Costa agradece) por velocidade excessiva!</p>`
+                }
+                res.innerHTML += `<p>Conduz sempre dentro dos limites de velocidade permitidos e de cinto de segurança!</p>`
+                    //aqui += é concatenação, porque é uma string e não number
+
+        }
+
+    </script>
+    
+</body>
+</html>
